@@ -53,7 +53,7 @@ print(f"Final test accuracy (full train): {final_test_accuracy:.3f}")
 
 plt.figure(figsize=(8, 6))
 plt.plot(train_sizes_abs, train_scores_mean, marker='o', color='grey', label='Train accuracy')
-plt.plot(train_sizes_abs, val_scores_mean, marker='o', color='green', label='Cross-validation accuracy')
+plt.plot(train_sizes_abs, val_scores_mean, marker='o', color='orange', label='Cross-validation accuracy')
 
 for x, y in zip(train_sizes_abs, train_scores_mean):
     plt.annotate(f'{y:.3f}',(x, y), textcoords="offset points", xytext=(0, 10), ha='center',
@@ -61,7 +61,7 @@ for x, y in zip(train_sizes_abs, train_scores_mean):
 
 for x, y in zip(train_sizes_abs, val_scores_mean):
     plt.annotate(f'{y:.3f}',(x, y), textcoords="offset points", xytext=(0, -15), ha='center',
-                fontsize=9, fontweight='bold', color='green')
+                fontsize=9, fontweight='bold', color='orange')
 
 plt.xlabel('Train dataset volume')
 plt.ylabel('Accuracy')
