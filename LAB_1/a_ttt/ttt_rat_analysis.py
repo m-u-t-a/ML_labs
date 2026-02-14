@@ -54,9 +54,9 @@ for x, y in zip(test_sizes, test_scores):
     plt.annotate(f'{y:.3f}',(x, y), textcoords="offset points", xytext=(0, -15), ha='center',
                 fontsize=9, fontweight='bold', color='green')
 
-plt.xlabel('Test-set ratio')
+plt.xlabel('Test dataset ratio')
 plt.ylabel('Accuracy')
-plt.title('Dependence of Accuracy on Test Set Size')
+plt.title('Learning Curve')
 plt.grid(True)
 plt.legend()
 plt.ylim(0.5, 1.0)
