@@ -25,16 +25,16 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-metrics = {
-    "euclidean": {"metric": "euclidean"},
-    "manhattan": {"metric": "manhattan"},
-    "chebyshev": {"metric": "chebyshev"}
-}
+# metrics = {
+#     "euclidean": {"metric": "euclidean"},
+#     "manhattan": {"metric": "manhattan"},
+#     "chebyshev": {"metric": "chebyshev"}
+# }
 
-k_values = range(1, 31)
-
-plt.figure(figsize=(10, 7))
-
+# k_values = range(1, 31)
+#
+# plt.figure(figsize=(10, 7))
+#
 # for metric_name, params in metrics.items():
 #
 #     errors = []
