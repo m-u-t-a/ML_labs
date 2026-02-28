@@ -34,8 +34,8 @@ ConfusionMatrixDisplay.from_predictions(y_test, y_test_pred, ax=axes[1], cmap=pl
 axes[1].set_title("Confusion Matrix - Test")
 plt.show()
 
-cmap_light = ListedColormap(['#FF0000', '#0000CD'])
-cmap_points = ListedColormap(['red', 'blue'])
+cmap_light = ListedColormap(['#FF0000', '#228B22'])
+cmap_points = ListedColormap(['red', 'green'])
 
 fig, ax = plt.subplots(figsize=(8, 6))
 disp = DecisionBoundaryDisplay.from_estimator(
@@ -54,7 +54,7 @@ ax.scatter(model.support_vectors_[:, 0], model.support_vectors_[:, 1],
 
 legend_elements = [
     Line2D([0], [0], marker='o', color='w', label='Class 0 (red)', markerfacecolor='red', markersize=8, markeredgecolor='k'),
-    Line2D([0], [0], marker='o', color='w', label='Class 1 (blue)', markerfacecolor='blue', markersize=8, markeredgecolor='k'),
+    Line2D([0], [0], marker='o', color='w', label='Class 1 (green)', markerfacecolor='green', markersize=8, markeredgecolor='k'),
     Line2D([0], [0], marker='o', color='w', label='Support Vectors', markerfacecolor='none', markeredgecolor='k', markersize=10, linewidth=1.5)
 ]
 ax.legend(handles=legend_elements)
@@ -76,7 +76,7 @@ ax.scatter(X_test[:, 0], X_test[:, 1], c=y_test, cmap=cmap_points, s=50, edgecol
 
 legend_elements = [
     Line2D([0], [0], marker='o', color='w', label='Class 0 (red)', markerfacecolor='red', markersize=8, markeredgecolor='k'),
-    Line2D([0], [0], marker='o', color='w', label='Class 1 (blue)', markerfacecolor='blue', markersize=8, markeredgecolor='k')
+    Line2D([0], [0], marker='o', color='w', label='Class 1 (green)', markerfacecolor='green', markersize=8, markeredgecolor='k')
 ]
 ax.legend(handles=legend_elements)
 ax.set_title("SVC (Linear kernel) - Test")
